@@ -1,0 +1,181 @@
+
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link link rel="stylesheet" href="CSS.css">
+    <link rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/CSS.css'%}" type="text/css">   
+    <title>Document</title>
+</head>
+<body>
+    <div class="navig">
+        <div class="whtis"><button class="bbutton"> <a href="C:\Users\Public\Разработка програмных средств\PR.№10\initialSite.html"> Главное </a></button></div>  
+        <div class="whtis"><button class="bbutton" ><a href="#Онас"> О нас  </a></button> </div> 
+        <div class="whtis"> <button class="bbutton"><a href="#Лучшее">Лучшее  </a></button></div> 
+        <!-- <div class="whtis">
+            <div class="dropdow">
+                 <button class="bbutton"><a href="#">Продажа  </a></button>
+                 <div class="dropdow-content">
+                    <a href="Toyta.html">Toyota  </a>
+                    <a href="Moskvich.html">Москвич </a>
+                    <a href="Nisann.html"> Nissan</a>
+                    <a href="Honda.html"> Honda</a>
+
+                </div>
+            </div> 
+           
+        </div>     -->
+               
+    </div>
+    <p></p>  
+    <header class="Centere">
+        {% load static %}
+        <div class="box1">  <img src="{% static 'img/Kamaz.jpg'%}" alt="" class="photo1"></div>
+        {% load static %}
+        <div class="box2">  <img src="{% static 'img/kamazsport.jpg'%}" alt="" class="photobox2"> </div>
+        {% load static %}
+        <div class="box3">  <img src="{% static 'img/whitkamaz.jpg'%}" alt="" class="photoall"> </div>
+        {% load static %}
+        <div class="box4">  <img src="{% static 'img/bluekamaz.jpeg'%}" alt="" class="photoall"> </div>
+        {% load static %}
+        <div class="box5">  <img src="{% static 'img/carkamaz.jpg'%}" alt="" class="photo1"> </div>
+    </header>
+
+    <div>
+        <hr size="6" width="100%" color="red"  >
+    </div>
+
+    <div>   
+        <div class="morecar" style="background-image: url(C:\Django\Saitproject\Sait\static\img\fon.jpg)";>   
+            <div id="Онас">
+                <p class="text" >О нас </p>
+            </div>
+            <div class="contentgrid">
+                <p class="content">У нас самые надежные и проверенные машины в мире. <br> Выберайте нас,не ошибетесь.</p>
+                 <div><hr size="6" width="60%" color="black" ></div>             
+            </div>
+            <div class="phone1">
+                <p > Званите по номеру: </p>
+                <hr size="6" width="100%" color="black" > 
+            </div>
+            <div class="phone2">
+                <p> 8 777 777 77 77 </p>
+                <hr size="6" width="100%" color="black" > 
+            </div>
+            <div class="opisan">
+                <p>Мы никого не обманули.</p>
+                <hr size="6" width="100%" color="black" > 
+            </div>
+            <div class="opisan1">
+                <p>Наверно.</p>
+                <hr size="6" width="100%" color="black" > 
+            </div>    
+        </div>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <!-- <div class="prodaga">
+        <div class="prodtext"> <Button class="button" id="Лучшее"> Лучшие машины по моему мнению</Button></div>
+        <div class="p1">        
+            <div class="dropdown">
+                {% load static %}
+                <img src="{% static 'img/foto4.jpg'%}" alt="" class="photot" >
+                <div class="dropdown-content">
+                    <a href="#">Лошадинных сил :  </a>
+                    <a href="#"> Вес : </a>
+                    <a href="#">Цена : 2 000 000  </a>
+                </div>
+            </div>
+        </div>
+        <div class="p2">
+            <div class="dropdown">
+                {% load static %}
+                <img src="{% static 'img/foto6.jpg'%}" alt="" class="photon" >
+                <div class="dropdown-content">
+                    <a href="#">Лошадинных сил :  </a>
+                    <a href="#"> Вес : </a>
+                    <a href="#">Цена : 7 000 000  </a>
+                </div>
+            </div>
+        </div>
+        <div class="p3">
+             <div class="dropdown">
+                {% load static %}
+                <img src="{% static 'img/foto7.jpg'%}" alt="" class="photo3" >
+                <div class="dropdown-content">
+                    <a href="#">Лошадинных сил :  </a>
+                    <a href="#"> Вес : </a>
+                    <a href="#">Цена : 100 000 000  </a>
+                </div>
+            </div>
+        </div>           
+    </div> -->
+    
+    <div>
+        <div class="button" >
+            <div >
+                {% for car in cars %}
+                <div> 
+                    <p> {{car.marka}} 
+                    Цена : {{car.cost}} 
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="bbutton">
+            <div>
+                <p>
+                    <a href="delete/72" > Удалить пользователя </a>               
+                </p>
+            </div>
+        </div>
+        <div class="bbutton">
+            <div>
+                <p>
+                    <a href="72" > Просмотреть конкретного пользователя пользователя </a>               
+                </p>
+            </div>
+        </div>
+        <div class="bbutton">
+            <div>
+                <p>
+                    <a href="listview/" > Посмотреть всех пользователей пользователя </a>               
+                </p>
+            </div>
+        </div>
+        <div class="bbutton">
+            <div>
+                <p>
+                    <a href="\" > Добавить пользователей </a>               
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+            <div class="Textcenter">
+               
+                <p  >Контактный номер : 7 888 888 88 88<br>
+                    Адрес: Ул.Москва ,строение 777.
+                </p>
+            </div>
+            <div class="karta">
+                <a href="https://yandex.ru/maps/org/rossiyskiy_ekonomicheskiy_universitet_imeni_g_v_plekhanova_korpus_11/30376153115/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;"></a><a href="https://yandex.ru/maps/213/moscow/category/technical_college/184106244/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;"></a><a href="https://yandex.ru/maps/213/moscow/category/courses_and_master_classes/184106220/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;"></a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.476674%2C55.712616&mode=search&oid=30376153115&ol=biz&sll=37.476674%2C55.712616&sspn=0.091087%2C0.031858&text=%D0%9C%D0%9F%D1%82&z=13.92" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+            <!-- <div class="Marka1">
+                <a class="marka1" href="C:\Users\Public\Разработка програмных средств\PR.№10\Toyta.html"> <hr size="6" width="100%" color="orange" > Toyota  </a>
+                <a class="marka2" href="C:\Users\Public\Разработка програмных средств\PR.№10\Moskvich.html">Москвич </a>
+                <a class="marka3" href="C:\Users\Public\Разработка програмных средств\PR.№10\Nisann.html"> Nissan</a> 
+                <a class="marka4" href="C:\Users\Public\Разработка програмных средств\PR.№10\Honda.html"> Honda  <hr size="6" width="100%" color="orange" > </a>
+        </div>        -->
+    </footer>
+</body>
+</html>

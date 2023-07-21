@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link link rel="stylesheet" href="">
+    <link rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, {{user.username|default:'Guest' }}</h1>
+
+    <p> Welcom to the Our site</p>
+    <div>
+        {% if user.is_authenticat%}
+            <a href="{% url 'logout' %}"></a>
+        {%else%}
+            <a href="{% url 'signup' %}"></a>
+            <a href="{% url 'login' %}"></a>
+        {% endif %}
+    </div>
+</body>
+</html>

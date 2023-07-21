@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link link rel="stylesheet" href="CssMoskvich.css">
+    <link rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/CssMoskvich.css'%}" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="center" >
+        <div class="navig">
+            <div class="whtis"><button class="bbutton"> <a href="\"> Главное </a></button></div>  
+            <div class="whtis"><button class="bbutton" ><a href="#"> О нас  </a></button> </div> 
+            <div class="whtis"> <button class="bbutton"><a href="#">Лучшее  </a></button></div> 
+            <div class="whtis">
+                <div class="dropdow">
+                    <button class="bbutton"><a href="#">Продажа  </a></button>
+                    <div class="dropdow-content">
+                        <a href="C:\Users\Public\Разработка програмных средств\PR.№10\Toyta.html">Toyota  </a>
+                        <a href="C:\Users\Public\Разработка програмных средств\PR.№10\Moskvich.html">Москвич </a>
+                        <a href="C:\Users\Public\Разработка програмных средств\PR.№10\Nisann.html"> Nissan</a>
+                        <a href="C:\Users\Public\Разработка програмных средств\PR.№10\Honda.html"> Honda</a>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+    <div class="sypracenter">
+        <div class="sypra">           
+                <div class="prodtext">
+                    <div class="centers">
+                        <Button class="button"> Москвич</Button>
+                    </div>                  
+                </div>       
+        </div>      
+    </div>
+    </div>
+    <div class="centers">    
+        <div class="prodagcenter">           
+            <div class="toytakcenter">
+                <div class="dropdown">
+                    {% load static %}    
+                    <img src="{%static 'img/foto5.jpg'%}" alt="" class="toytakamri">
+                    <div class="dropdown-content">
+                        <a href="#">Лошадинных сил :  </a>
+                        <a href="#"> Вес : </a>
+                        <a href="#">Цена : 100 000 000  </a>
+                    </div>
+                </div>
+            </div>
+            <div class="toytasupracenter">
+                <div class="dropdown">
+                    {% load static %}    
+                    <img src="{% static 'img/Moskvich412.jpg'%}" alt="" class="toytasupra">
+                    <div class="dropdown-content">
+                        <a href="#">Лошадинных сил :  </a>
+                        <a href="#"> Вес : </a>
+                        <a href="#">Цена : 100 000 000  </a>
+                    </div>
+                </div>
+            </div>
+            <div class="solaracenter">
+                <div class="dropdown">
+                    {% load static %}    
+                    <img src="{% static 'img/moskvich2140.jpg'%}" alt="" class="solara">
+                    <div class="dropdown-content">
+                        <a href="#">Лошадинных сил :  </a>
+                        <a href="#"> Вес : </a>
+                        <a href="#">Цена : 100 000 000  </a>
+                    </div>
+                </div>
+            </div>
+            <div class="gtcenter">
+                <div class="dropdown">
+                    {% load static %}    
+                    <img src="{% static 'img/Moskvich3.jpg'%}" alt="" class="gt">
+                    <div class="dropdown-content">
+                        <a href="#">Лошадинных сил :  </a>
+                        <a href="#"> Вес : </a>
+                        <a href="#">Цена : 100 000 000  </a>
+                    </div>
+                </div>
+            </div>
+            <div class="landcenter">
+                <div class="dropdown">
+                    {% load static %}    
+                    <img src="{% static 'img/Moskvich408.jpg'%}" alt="" class="land">
+                    <div class="dropdown-content">
+                        <a href="#">Лошадинных сил :  </a>
+                        <a href="#"> Вес : </a>
+                        <a href="#">Цена : 100 000 000  </a>
+                    </div>
+                </div>
+            </div>
+            <div class="Grcenter">
+                <div class="dropdown">
+                    {% load static %}    
+                    <img src="{% static 'img/Moskvich6.jpg'%}" alt="" class="Gr">
+                    <div class="dropdown-content">
+                        <a href="#">Лошадинных сил :  </a>
+                        <a href="#"> Вес : </a>
+                        <a href="#">Цена : 100 000 000  </a>
+                    </div>
+                </div>
+            </div>                 
+        </div>
+        </div>
+     </div>
+     <div class="button">
+        {% for Modelcar in Modelcars %}
+        <div>
+            <p> 
+                Модель : {{Modelcar.modele}} <br>
+                Цвет : {{Modelcar.color}} <br>           
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+     <p></p>
+     <footer class="centerfon">
+        <div class="fonfoter">
+            <div class="Textcenter">
+                <p  >Контактный номер : 7 888 888 88 88<br>
+                    Адрес: Ул.Москва ,строение 777.
+                </p>
+            </div>
+            <div class="karta" >
+                <a href="https://yandex.ru/maps/org/rossiyskiy_ekonomicheskiy_universitet_imeni_g_v_plekhanova_korpus_11/30376153115/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;"></a><a href="https://yandex.ru/maps/213/moscow/category/technical_college/184106244/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;"></a><a href="https://yandex.ru/maps/213/moscow/category/courses_and_master_classes/184106220/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;"></a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.476674%2C55.712616&mode=search&oid=30376153115&ol=biz&sll=37.476674%2C55.712616&sspn=0.091087%2C0.031858&text=%D0%9C%D0%9F%D1%82&z=13.92" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+        </div>
+     </footer>  
+</body>
+</html>

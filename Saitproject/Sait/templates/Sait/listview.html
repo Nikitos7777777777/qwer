@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link link rel="stylesheet" href="Css1.css">
+    <link rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bbutton">
+        {% for data in dataset%}
+            <h3> id : {{data.id}}</h3>
+            <h3> Marka : {{data.marka}} </h3>
+            <h3> Cost : {{data.cost}}</h3>
+        {% endfor %}
+    </div>
+</body>
